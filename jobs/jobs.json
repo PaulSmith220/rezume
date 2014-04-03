@@ -1,0 +1,24 @@
+
+[
+    {
+        "name" : "ГБУЗ ЧОМИАЦ",
+        "post" : "Программист",
+        "lifetime" : {"start": 1343779200, "stop": 1370044800},
+        "id"  : "miac",
+        "image": "img/miac.png"
+    },
+    {
+        "name" : "ООО Малахитсофт",
+        "post" : "Программист",
+        "lifetime" : {"start": 1370044800, "stop": 1380585600},
+        "id" : "malahit_first",
+        "image" : "img/malahit.png"
+    },
+    {
+        "name" : "ООО Малахитсофт",
+        "post" : "Инженер-программист",
+        "lifetime" : {"start": 1380585600, "stop": 0},
+        "id" : "malahit_sec",
+        "image" : "img/malahit.png"
+    }
+]

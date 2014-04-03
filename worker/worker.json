@@ -1,0 +1,10 @@
+{
+	"name" : "Кузнецов Павел Сергеевич",
+	"bDate" : 657590400,
+	"specialization" : ["JavaScript", "AngularJS", "jQuery", "UI", "Frontend -разработка"],
+	"description" : "JavaScript Developer, Frontend разработчик",
+	"cost" : 40000,
+	"exp" : 1.5,
+	"picture" : "img/face.png",
+	"mail" : "kuznetps@gmail.com"
+}
