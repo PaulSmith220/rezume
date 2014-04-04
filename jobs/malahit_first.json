@@ -2,11 +2,12 @@
 	"name" : "ООО Малахитсофт",
     "post" : "Программист",
     "lifetime" : {"start": 1370044800, "stop": 1380585600},
+    "image" : "img/malahit.png",
     "responsibility" : [
     	{
     		"name" : "Сопровождение ERP-системы для групп компаний ЧТПЗ",
     		"core" : ["Выполнение заявок по сопровождению и разработке"],
-    		"tech" : ["JavaScript", C#", ".Net MVC", "MS SQL", "Oracle PL/SQL", "Git", "TFS"],
+    		"tech" : ["JavaScript", "C#", ".Net MVC", "MS SQL", "Oracle PL/SQL", "Git", "TFS"],
             "comment" : "Поддержка старой системы + Разработка базовых модулей для новой",
     		"image" : "img/malahit.png",
             "complete" : true

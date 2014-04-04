@@ -6,5 +6,7 @@
 	"cost" : 40000,
 	"exp" : 1.5,
 	"picture" : "img/face.png",
-	"mail" : "kuznetps@gmail.com"
+	"mail" : "kuznetps@gmail.com",
+	"links": [{"title": "Github", "url": "https://github.com/PaulSmith220/"}, 
+			  {"title": "Публикации", "url" : "http://habrahabr.ru/users/paul_smith/topics/"}]
 }

@@ -23,35 +23,37 @@
 		<div class="header">
 			<h3 class="text-muted">{{worker.name}}</h3>
 		</div>
-		<div class="jumbotron">
-			<img ng-src="{{worker.picture}}"  />
-			<div  id="w_desc" class="pull-right">
-				<p class="lead">Должность: <b>{{worker.description}}</b></p>
-				<p>Специализация: 
-					<p ng-repeat="spec in worker.specialization" class="spec badge">{{spec}} &nbsp;</p>
-				</p>
-				<p>Возраст: {{worker.age}}</p>
-				<p>Стаж: {{worker.exp}}</p>
-				<p>Зарплатные ожидания: {{worker.cost | filter:roubles}}</p>
-			</div>
+		<div class="jumbotron" ng-view>
+			
 		</div>
-		Предыдущие места работы:
+		Предыдущие места работы: <span class="pull-right">Сортировка: <select ng-model="orderProp">
+									<option value="lifetime.start">Время по нарастанию</option>
+									<option value="-lifetime.start">Время по убыванию</option>
+								 </select></span>
 		<div class="row marketing">
 			<div class="col-lg-{{jobs.length}}">
 
-            <div class="w_place" ng-repeat="job in jobs">
+            <div class="w_place" ng-repeat="job in jobs | orderBy:orderProp" ng-click="showInfo(job.id)">
               <img ng-src="{{job.image}}" width="50" />
               <h4>{{job.name}} <a class="btn btn-small">Подробнее</a></h4>
               <p>{{job.post}} </p>
             </div>
 
 </div>
+		
 		</div>
 
 		<div class="footer"><a href="mailto:{{worker.mail}}">{{worker.mail}}</a></div>
 	</div>
 	
 			
+</div>
+
+<div id="dop_info">
+Данное резюме написано на AngularJS, как способ продемонстрировать свои навыки.
+Реализован роутинг, несколько модулей и контроллеров. Для получения данных используются сервисы.
+Данные отдаются сервером в формате JSON (в т.ч. url изображений).<br>
+Исходный код: <a href="https://github.com/PaulSmith220/rezume" target="_blank">https://github.com/PaulSmith220/rezume</a>
 </div>
 </boDy>
 </html>

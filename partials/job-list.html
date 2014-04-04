@@ -1,8 +1,11 @@
-<div class="col-lg-{{jobs.length}}">
-
-            <div class="w_place" ng-repear="job in jobs">
-              <h4>{{job.name}}</h4>
-              <p>{{job.post}}</p>
-            </div>
-
-</div>
+<img ng-src="{{worker.picture}}"  />
+			<div  id="w_desc" class="pull-right">
+				<p class="lead">Должность: <b>{{worker.description}}</b></p>
+				<p>Специализация: 
+					<p ng-repeat="spec in worker.specialization" class="spec badge">{{spec}} &nbsp;</p>
+				</p>
+				<p>Возраст: {{worker.age}}</p>
+				<p>Стаж: {{worker.exp}}</p>
+				<p>Зарплатные ожидания: от {{worker.cost | filter:roubles}}</p>
+				<p ng-repeat="link in worker.links">{{link.title}}: <a target="_blank" href="{{link.url}}">{{link.url}}</a> </p>
+			</div>

@@ -72,7 +72,7 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
-    height: 400px;
+    min-height: 400px;
   }
 }
 
@@ -81,7 +81,7 @@ body {
 	width: 350px;
 }
 #w_desc p{
-	font-size: : 12px !important;
+	font-size: 12px !important;
 }
 .spec {
 	font-size: 12px !important;
@@ -89,7 +89,7 @@ body {
 img {
 	border-radius: 7px;
 }
-.w_place{
+.w_place {
   display:  block;
   border: 1px solid lightgrey;
   margin: 5px;
@@ -98,7 +98,29 @@ img {
   cursor:pointer;
   transition: background-color 0.3s;
 }
-.w_place:hover{
-  background-color: :lightgrey;
+.w_place:hover {
+  background-color:#eeeeee; 
   transition: background-color 0.3s;
+}
+
+#dop_info {
+  position: fixed;
+  left:0;
+  top: 5%;
+  width: 270px;
+  min-height: 150px;
+  padding: 5px;
+
+  border-radius: 0 10px 10px 0;
+  background-color: #f0f0f0;
+  color: #999;
+}
+
+#job_info p {
+  font-size: 14px !important;
+}
+.tech_container{
+  display: inline-block;
+  width: 100%;
+  text-align: right;
 }

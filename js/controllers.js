@@ -9,6 +9,11 @@ function WorkerCtrl($scope, Worker, Job){
 	});
 	$scope.jobs = Job.query();
 
+	$scope.showInfo = function(id) {
+		location.hash = "#/jobs/" + id;
+	}
+
+	$scope.orderProp = '-lifetime.start';
 	
 }
 
@@ -17,10 +22,14 @@ function JobListCtrl($scope, Job) {
 }
 
 function JobDetailCtrl($scope, $routeParams, Job) {
+	$scope.work_start = 0;
+	$scope.work_end = 0;
 	$scope.job = Job.get({
 							jobId: $routeParams.jobId},
 							function(job) {
-								$scope.mainImageUrl = job.image;
+								$scope.work_start = job.lifetime.start*1000;
+								$scope.work_end = job.lifetime.stop == 0 ? new Date() : job.lifetime.stop*1000;
+
 							}
 	);
 
